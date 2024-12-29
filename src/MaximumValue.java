@@ -6,7 +6,7 @@ import java.util.Random;
 public class MaximumValue {
     public static void main(String[] args) {
         // Make this less if your machine might encounter an out-of-memory error
-        final int N = 15; // Try with smaller values like 1000, 10000, or 100000 for testing
+        final int N = 1000; // Try with smaller values like 1000, 10000, or 100000 for testing
         int[] arr = addElements(N);
         long start, end;
 
@@ -32,12 +32,12 @@ public class MaximumValue {
         int maxSorting = findMaxSorting(arr, N);
         end = System.nanoTime();
         System.out.println("\nMax Sorting\t\t: " + maxSorting + " (Time: " + (end - start) + " ns)");
-        /*
+
         start = System.nanoTime();
         int maxRecursion = findMaxRecursion(arr, N);
         end = System.nanoTime();
         System.out.println("\nMaximum Value\t: " + maxRecursion + " (Time: " + (end - start) + " ns)");
-        */
+
     }
 
     // Method to generate random elements in an array
@@ -81,13 +81,13 @@ public class MaximumValue {
         }
     }
 
-    /*
+
     public static int findMaxRecursion(int[] arr, int N) {
         if (N == 1) {
             return arr[0];
         }
         return Math.max(arr[N-1], findMaxRecursion(arr, N - 1));
     }
-     */
+
 
 }
